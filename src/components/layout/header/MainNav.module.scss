@@ -1,0 +1,56 @@
+@use '../../../styles/variables' as *;
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+
+    .logo {
+        width: 10rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        font-size: 1.4rem;
+
+        ul {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        .btn-book-tour {
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            background-color: $color-text-secondary;
+            color: $color-text-light;
+            font-size: 1.3rem;
+
+        }
+    }
+
+    .menu {
+        display: none;
+        font-size: 5rem;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .list {
+        display: none !important;
+    }
+
+    .menu {
+        display: block !important;
+    }
+}

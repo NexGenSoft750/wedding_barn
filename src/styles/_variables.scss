@@ -4,6 +4,16 @@ $color-text-secondary: #667462;
 $color-text-light: #ffffff;  
 $color-bg-primary: #b57059;
 
+$bg-head: #6e7158;
+
 // Fonts
 $font-family-base: 'Libre Baskerville', serif;
-$font-family-alt: "Montserrat"
+$font-family-alt: "Montserrat";
+
+
+$breakpoint-xxs: 320px;   // extra small phones
+$breakpoint-xs: 480px;   // phones
+$breakpoint-sm: 576px;   // small devices
+$breakpoint-md: 768px;   // tablets
+$breakpoint-lg: 992px;   // laptops
+$breakpoint-xl: 1200px;  // desktops

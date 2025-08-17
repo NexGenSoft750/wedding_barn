@@ -1,0 +1,79 @@
+@use ".././styles/variables" as *;
+@use ".././styles/mixins" as *;
+
+.card {
+    width: 15%;
+    
+    .img {
+        // background-image: url(https://acre31.com/Venue_Amenities.jpeg);
+        height: 200px;
+        width: 100%;
+        background-position: center;
+        -o-object-fit: fill;
+           object-fit: fill;
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        @include respond-to($breakpoint-md) {
+            height: 400px;
+        }
+    }
+
+    .content {
+        text-align: center;
+        font-style: italic;
+        letter-spacing: 0.1rem;
+        margin-top: 1rem;
+        @include flex-column-gap(0.3rem);
+
+        h5 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 0.7rem;
+            margin: 0;
+        }
+
+        a {
+            color: $color-text-primary;
+        }
+
+        @include respond-to($breakpoint-md) {
+            h5 {
+                font-size: 5rem;
+            }
+    
+            p {
+                font-size: 1.5rem;
+            }
+
+            a {
+                font-size: 2.2rem;
+            }
+        }
+
+        @include respond-to($breakpoint-xs) {
+            h5 {
+                font-size: 3.5rem;
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+
+            a {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    @include respond-to($breakpoint-xl) {
+        width: 19%;
+    }
+
+    @include respond-to($breakpoint-md) {
+        width: 80%;
+    }
+}
