@@ -1,0 +1,129 @@
+@use '../../../styles/variables' as *;
+
+.sticky-navbar-desk {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    justify-content: center;
+    /* Strong frosted-glass effect */
+    background: rgba(181, 112, 89, 0.85); /* Almost solid, allows blur to show */
+    backdrop-filter: blur(20px); /* Strong blur */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+
+     /* Start hidden */
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &.show-navbar {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        pointer-events: auto;
+    }
+
+    .navbar {
+        position: -webkit-sticky;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1320px;
+
+
+        .logo {
+            font-size: 1.6rem;
+            color: white;
+            align-items: center;
+            display: flex;
+        }
+
+        .list {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: 1.4rem;
+
+            ul {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                margin: 0;
+                color: $color-text-light;
+                font-size: 1.6rem;
+                font-weight: 800;
+            }
+
+        }
+        
+        .btn-book-tour {
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            background-color: $color-text-secondary;
+            color: $color-text-light;
+            font-size: 1.4rem;
+
+        }
+
+        .menu {
+            display: none;
+            font-size: 5rem;
+        }
+    }
+}
+
+.sticky-navbar-mob {
+    display: flex;
+    padding: 20px 10px;
+
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+    justify-content: space-between;
+    /* Strong frosted-glass effect */
+    background: rgba(181, 112, 89, 0.85); /* Almost solid, allows blur to show */
+    backdrop-filter: blur(20px); /* Strong blur */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+
+     /* Start hidden */
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &.show-navbar {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        pointer-events: auto;
+    }
+    
+    .logo {
+        width: 7rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .list {
+        display: none !important;
+    }
+
+    .menu {
+        display: block !important;
+    }
+}

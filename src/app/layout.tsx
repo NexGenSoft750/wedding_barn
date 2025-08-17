@@ -1,6 +1,7 @@
-import { Header } from '@/components/layout/header/main-header';
+import Header from '@/components/layout/header/MainHeader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.scss';
+import Footer from '@/components/layout/footer/Footer';
 
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
