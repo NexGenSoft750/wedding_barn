@@ -1,0 +1,21 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.hero {
+    text-align: center;
+    padding: 0rem 2rem;
+    
+    p {
+        letter-spacing: 0.2rem;
+        margin: 0;
+
+        @include respond-to($breakpoint-md) {
+            font-size: 1.4rem;
+        }
+    }
+    
+    h2 {
+        font-size: 3rem;
+        font-style: italic;
+    }
+}
