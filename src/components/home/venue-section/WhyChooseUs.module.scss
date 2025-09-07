@@ -13,8 +13,8 @@
     .content {
         display: flex;
         gap: 4rem;
-        
-        .list-items {
+
+        .listItems {
             font-size: 1.5rem;
             width: 55%;
 
@@ -29,10 +29,10 @@
             }
         }
 
-        .image {
+        .imageWrapper {
             width: 45%;
 
-            img {
+            .image {
                 width: 100%;
                 height: 100%;
             }

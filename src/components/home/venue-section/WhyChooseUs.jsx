@@ -2,10 +2,10 @@ import styles from "./WhyChooseUs.module.scss";
 
 function WhyChooseUs() {
     return (
-        <div className={`${styles.main}`}>
+        <div className={styles.main}>
             <h3>Why Choose Acre 31?</h3>
-            <div className={`${styles.content}`}>
-                <div className={`${styles['list-items']}`}>
+            <div className={styles.content}>
+                <div className={styles.listItems}>
                     <ul>
                         <li>
                             <b>Affordable Luxury:</b> Enjoy the charm and sophistication of a high-end venue at a fraction of the cost. Our competitive pricing ensures you get the best value for your investment.
@@ -24,8 +24,8 @@ function WhyChooseUs() {
                         </li>
                     </ul>
                 </div>
-                <div className={`${styles['image']}`}>
-                    <img src="https://acre31.com/Venue_Couple_at_arch.png" alt="" />
+                <div className={styles.imageWrapper}>
+                    <img className={styles.image} src="https://acre31.com/Venue_Couple_at_arch.png" alt="" />
                 </div>
             </div>
         </div>
