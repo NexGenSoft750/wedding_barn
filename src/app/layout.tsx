@@ -1,8 +1,6 @@
-import Header from '@/components/layout/header/MainHeader';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/globals.scss';
-import Footer from '@/components/layout/footer/Footer';
-
+import '@/styles/globals.scss';
+import Layout from '@/components/layout/Layout';
 
 export const metadata = {
   title: 'Wedding Barn',
@@ -12,10 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
+      <body suppressHydrationWarning>
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import styles from './ReadySetIDo.module.scss';
 
 function ReadySetIDo() {
     return (
-        <div class={`${styles.main}`}>
+        <div className={`${styles.main}`}>
             <h3 className={`${styles.mobile}`}>Ready, Set, “I do"!</h3>
             <div className={`${styles.content}`}>
                 <div className={`${styles['image']}`}>

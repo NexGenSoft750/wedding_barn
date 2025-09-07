@@ -2,7 +2,7 @@ import styles from './OfferToAustin.module.scss';
 
 function OfferToAustin() {
     return (
-        <div class={`${styles.main}`}>
+        <div className={`${styles.main}`}>
             <h3>What We Offer To Austin Weddings</h3>
             <div className={`${styles.content}`}>
                 <div className={`${styles['list-items']}`}>
