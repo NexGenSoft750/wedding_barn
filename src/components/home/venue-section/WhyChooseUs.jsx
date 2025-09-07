@@ -2,7 +2,7 @@ import styles from "./WhyChooseUs.module.scss";
 
 function WhyChooseUs() {
     return (
-        <div class={`${styles.main}`}>
+        <div className={`${styles.main}`}>
             <h3>Why Choose Acre 31?</h3>
             <div className={`${styles.content}`}>
                 <div className={`${styles['list-items']}`}>

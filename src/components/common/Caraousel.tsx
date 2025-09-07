@@ -4,6 +4,7 @@ import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 import styles from "./Carousel.module.scss";
 import { useState } from "react";
+import Image from "next/image";
 
 type CarouselProps = {
   slides: string[];
@@ -29,15 +30,26 @@ function Carousel({ slides }: CarouselProps) {
         }}
       >
         {slides.map((slide, index) => (
-          <img
+          <div
             key={index}
-            src={slide}
-            alt={`Slide ${index}`}
-            style={{ width: "100%", flexShrink: 0 }}
-          />
+            style={{
+              width: "100%",
+              aspectRatio: "16/9",
+              flexShrink: 0,
+              position: "relative",
+              overflow: "hidden",
+              backgroundColor: "#000",
+            }}
+          >
+            <Image
+              src={slide}
+              alt={`Slide ${index}`}
+              fill
+              style={{ objectFit: "contain" }}
+            />
+          </div>
         ))}
       </div>
-
       <div className={`${styles['content']}`}>
         <p>choose the perfect setting for your dream wedding</p>
         <button className={`${styles['cta']}`}>See Acre 31 for Yourself</button>
