@@ -6,6 +6,7 @@ import WeddingExperience from "@/components/home/WeddingExperience";
 import StickyBackgroundSection from "@/components/home/StickyBackgroundSection";
 import { slides } from "@/data/slides";
 import type { Metadata } from 'next';
+import TestimonialCarousel from "@/components/home/TestimonialCarousel";
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -41,6 +42,7 @@ export default function HomePage() {
       <StickyBackgroundSection />
       <OurWeddingHall />
       <WeddingExperience />
+      <TestimonialCarousel />
     </>
   );
 }
