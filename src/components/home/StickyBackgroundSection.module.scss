@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.stickyBackgroundSection {
+    background-image: url('/images/stickyImage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    @media (max-width: $breakpoint-md) {
+        background-attachment: scroll;
+        height: 80vh;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        height: 60vh;
+    }
+}

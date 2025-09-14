@@ -1,0 +1,84 @@
+@use '../../styles/variables' as *;
+
+.ourWeddingHall {
+    display: flex;
+    align-items: center;
+
+    &__imagesContainer {
+        width: 58%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-left: -40px;
+
+        .ourWeddingHall__image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        width: 42%;
+        background-color: $bg-primary;
+        position: relative;
+        right: 0px;
+        padding: 3.5rem 3.8rem;
+        color: white;
+        font-family: sans-serif;
+
+        .ourWeddingHall__heading {
+            font-size: 3.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .ourWeddingHall__text {
+            font-size: 1.6rem;
+            line-height: 27px;
+        }
+
+        .ourWeddingHall__contactBtn {
+            margin-top: 1rem;
+            outline: none;
+            background: none;
+            color: white;
+            padding: 0.4rem 1rem;
+            font-size: 1.8rem;
+            border: 2px solid white;
+        }
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        &__imagesContainer {
+            width: 50%;
+            margin-left: -20px;
+        }
+
+        &__content {
+            width: 50%;
+            padding: 3rem 3rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column-reverse;
+        gap: 3rem;
+
+        &__imagesContainer {
+            width: 100%;
+            margin-left: 0;
+            order: 2;
+        }
+
+        &__content {
+            width: 100%;
+            padding: 2.5rem 2rem;
+            order: 1;
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        &__content {
+            padding: 2rem 1.5rem;
+        }
+    }
+}

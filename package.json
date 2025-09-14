@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "generate": "node generate.js"
   },
   "dependencies": {
     "axios": "^1.11.0",
@@ -27,6 +28,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-slick": "^0.23.13",
+    "plop": "^4.0.2",
     "typescript": "^5"
   }
 }

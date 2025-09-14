@@ -10,11 +10,14 @@
     max-width: 100%;
     justify-content: center;
     /* Strong frosted-glass effect */
-    background: rgba(181, 112, 89, 0.85); /* Almost solid, allows blur to show */
-    backdrop-filter: blur(20px); /* Strong blur */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    background: rgba(181, 112, 89, 0.85);
+    /* Almost solid, allows blur to show */
+    backdrop-filter: blur(20px);
+    /* Strong blur */
+    -webkit-backdrop-filter: blur(20px);
+    /* Safari support */
 
-     /* Start hidden */
+    /* Start hidden */
     opacity: 0;
     transform: translateY(-100%);
     pointer-events: none;
@@ -57,10 +60,14 @@
                 color: $color-text-light;
                 font-size: 1.6rem;
                 font-weight: 800;
+
+                a {
+                    color: white;
+                }
             }
 
         }
-        
+
         .btn-book-tour {
             height: -webkit-fit-content;
             height: -moz-fit-content;
@@ -87,11 +94,14 @@
     max-width: 100%;
     justify-content: space-between;
     /* Strong frosted-glass effect */
-    background: rgba(181, 112, 89, 0.85); /* Almost solid, allows blur to show */
-    backdrop-filter: blur(20px); /* Strong blur */
-    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    background: rgba(181, 112, 89, 0.85);
+    /* Almost solid, allows blur to show */
+    backdrop-filter: blur(20px);
+    /* Strong blur */
+    -webkit-backdrop-filter: blur(20px);
+    /* Safari support */
 
-     /* Start hidden */
+    /* Start hidden */
     opacity: 0;
     transform: translateY(-100%);
     pointer-events: none;
@@ -102,7 +112,7 @@
         transform: translateY(0) !important;
         pointer-events: auto;
     }
-    
+
     .logo {
         width: 7rem;
 
