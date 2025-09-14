@@ -1,0 +1,41 @@
+@use '../../styles/variables' as *;
+
+.introSection {
+    color: rgba(181, 112, 89, 0.85);
+    background-color: $bg-intro-section;
+    padding: 10rem 2rem;
+
+    .introSection__wrapper {
+        width: 65%;
+        margin: 0 auto;
+        text-align: center;
+
+        .introSection__text {
+            font-size: 2.25rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        padding: 8rem 2rem;
+
+        .introSection__wrapper {
+            width: 75%;
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        padding: 6rem 2rem;
+
+        .introSection__wrapper {
+            width: 85%;
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 5rem 1.5rem;
+
+        .introSection__wrapper {
+            width: 95%;
+        }
+    }
+}

@@ -1,0 +1,242 @@
+@use '../../styles/variables' as *;
+
+.weddingExperience {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f8f9 0%, #e8e8e9 100%);
+
+    &__header {
+        text-align: center;
+        margin-bottom: 5rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 2rem;
+    }
+
+    &__title {
+        font-size: 3.8rem;
+        font-family: $font-family-base;
+        color: $color-text-primary;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+    }
+
+    &__subtitle {
+        font-size: 1.6rem;
+        color: $color-text-secondary;
+        line-height: 1.6;
+        font-family: $font-family-alt;
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto 6rem auto;
+        padding: 0 2rem;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__feature {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &__featureIcon {
+        width: 80px;
+        height: 80px;
+        background: $bg-primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem auto;
+        color: white;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__featureTitle {
+        font-size: 2.2rem;
+        font-family: $font-family-base;
+        color: $color-text-primary;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    &__featureText {
+        font-size: 1.4rem;
+        color: $color-text-secondary;
+        line-height: 1.6;
+        font-family: $font-family-alt;
+    }
+
+    &__testimonial {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: $bg-primary;
+            border-radius: 2px;
+        }
+    }
+
+    &__testimonialContent {
+        text-align: center;
+    }
+
+    &__quote {
+        color: $bg-primary;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__testimonialText {
+        font-size: 1.8rem;
+        font-family: $font-family-base;
+        color: $color-text-primary;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+        font-style: italic;
+        position: relative;
+        padding: 0 2rem;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 1.6rem;
+            padding: 0 1rem;
+        }
+    }
+
+    &__testimonialAuthor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__authorName {
+        font-size: 1.6rem;
+        font-family: $font-family-alt;
+        color: $color-text-primary;
+        font-weight: 600;
+    }
+
+    &__authorDate {
+        font-size: 1.4rem;
+        color: $color-text-secondary;
+        font-family: $font-family-alt;
+    }
+
+    // Responsive adjustments
+    @media (max-width: $breakpoint-lg) {
+        padding: 5rem 0;
+
+        &__header {
+            margin-bottom: 4rem;
+        }
+
+        &__title {
+            font-size: 3.2rem;
+        }
+
+        &__features {
+            gap: 3rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        padding: 4rem 0;
+
+        &__header {
+            margin-bottom: 3rem;
+        }
+
+        &__title {
+            font-size: 2.8rem;
+        }
+
+        &__subtitle {
+            font-size: 1.4rem;
+        }
+
+        &__feature {
+            padding: 1.5rem;
+        }
+
+        &__featureTitle {
+            font-size: 2rem;
+        }
+
+        &__featureText {
+            font-size: 1.3rem;
+        }
+
+        &__testimonial {
+            padding: 3rem 1.5rem;
+        }
+
+        &__testimonialText {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        &__title {
+            font-size: 2.4rem;
+        }
+
+        &__subtitle {
+            font-size: 1.3rem;
+        }
+
+        &__featureIcon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1.5rem;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__featureTitle {
+            font-size: 1.8rem;
+        }
+
+        &__featureText {
+            font-size: 1.2rem;
+        }
+    }
+}

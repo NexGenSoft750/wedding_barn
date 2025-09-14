@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acre31.com/sitemap.xml
+
+# Acre31 Wedding Venue
+# Luxury wedding venue with stunning countryside views

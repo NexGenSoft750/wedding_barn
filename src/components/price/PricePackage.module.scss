@@ -1,5 +1,6 @@
 // Import responsive styles and variables
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
+@use 'sass:color';
 
 // PricePackage.module.scss
 .pricePackage {
@@ -8,7 +9,7 @@
   margin: 0 auto;
   font-family: $font-family-base;
   color: $color-text-primary;
-  
+
   h3 {
     font-size: 3.6rem;
     font-weight: 700;
@@ -18,8 +19,8 @@
     font-family: $font-family-alt;
     letter-spacing: 0.1rem;
   }
-  
-  > p {
+
+  >p {
     font-size: 1.6rem;
     color: $color-text-secondary;
     text-align: center;
@@ -37,12 +38,12 @@
   margin-bottom: 3rem;
   box-shadow: 0 0.4rem 1.6rem rgba(110, 113, 88, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 0.8rem 2.4rem rgba(110, 113, 88, 0.2);
   }
-  
+
   h4 {
     font-size: 2.4rem;
     font-weight: 600;
@@ -54,12 +55,12 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     li {
       display: flex;
       justify-content: space-between;
@@ -69,13 +70,14 @@
       border-bottom: 0.1rem solid rgba(102, 116, 98, 0.2);
       font-family: $font-family-base;
       font-weight: 500;
-      
+
       &:last-child {
         border-bottom: none;
       }
-      
+
       // Dynamic styling based on pricing priority
-      &:nth-child(1) { // Highest price - Premium styling
+      &:nth-child(1) {
+        // Highest price - Premium styling
         font-weight: 700;
         color: $color-bg-primary;
         background: rgba(181, 112, 89, 0.1);
@@ -83,37 +85,40 @@
         border-radius: 0.6rem;
         margin-bottom: 0.5rem;
       }
-      
-      &:nth-child(2) { // Second highest
+
+      &:nth-child(2) {
+        // Second highest
         font-weight: 600;
-        color: darken($color-bg-primary, 10%);
+        color: color.adjust($color-bg-primary, $lightness: -10%);
       }
-      
-      &:nth-child(3) { // Third
+
+      &:nth-child(3) {
+        // Third
         font-weight: 500;
         color: $color-text-secondary;
       }
-      
-      &:nth-child(4) { // Lowest price
+
+      &:nth-child(4) {
+        // Lowest price
         font-weight: 400;
         color: $color-text-primary;
       }
-      
+
       span:first-child {
         font-weight: inherit;
       }
-      
+
       span:last-child {
         font-weight: 700;
         color: inherit;
       }
-      
+
       @media (max-width: $breakpoint-md) {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
         font-size: 1.6rem;
-        
+
         span:last-child {
           font-size: 1.8rem;
         }
@@ -123,14 +128,14 @@
 }
 
 .includedSection {
-  background: linear-gradient(135deg, $bg-head 0%, darken($bg-head, 15%) 100%);
+  background: linear-gradient(135deg, $bg-head 0%, color.adjust($bg-head, $lightness: -15%) 100%);
   color: $color-text-light;
   border-radius: 1.2rem;
   padding: 3rem;
   margin-top: 4rem;
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -141,7 +146,7 @@
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
     pointer-events: none;
   }
-  
+
   h4 {
     font-size: 2.6rem;
     font-weight: 600;
@@ -153,14 +158,14 @@
     position: relative;
     z-index: 1;
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
     position: relative;
     z-index: 1;
-    
+
     li {
       font-size: 1.7rem;
       padding: 1.2rem 0;
@@ -168,7 +173,7 @@
       padding-left: 3rem;
       font-family: $font-family-base;
       line-height: 1.6;
-      
+
       &::before {
         content: '✓';
         position: absolute;
@@ -203,12 +208,12 @@
     max-width: 90rem;
     padding: 2rem 1rem;
   }
-  
+
   .pricingSection {
     padding: 2.5rem;
     margin-bottom: 2.5rem;
   }
-  
+
   .includedSection {
     padding: 2.5rem;
     margin-top: 3rem;
@@ -219,12 +224,12 @@
   .pricePackage {
     padding: 1.5rem 0.8rem;
   }
-  
+
   .pricingSection {
     padding: 2rem;
     margin-bottom: 2rem;
   }
-  
+
   .includedSection {
     padding: 2rem;
   }
@@ -233,19 +238,19 @@
 @media (max-width: $breakpoint-sm) {
   .pricingSection {
     padding: 1.5rem;
-    
+
     ul li {
       padding: 1rem 0;
     }
   }
-  
+
   .includedSection {
     padding: 1.5rem;
-    
+
     ul li {
       padding: 1rem 0;
       padding-left: 2.5rem;
-      
+
       &::before {
         width: 2rem;
         height: 2rem;
@@ -259,12 +264,12 @@
   .pricePackage {
     padding: 1rem 0.5rem;
   }
-  
+
   .pricingSection {
     padding: 1.2rem;
     border-radius: 0.8rem;
   }
-  
+
   .includedSection {
     padding: 1.2rem;
     border-radius: 0.8rem;
@@ -272,7 +277,9 @@
 }
 
 @media (max-width: $breakpoint-xxs) {
-  .pricingSection, .includedSection {
+
+  .pricingSection,
+  .includedSection {
     padding: 1rem;
   }
 }

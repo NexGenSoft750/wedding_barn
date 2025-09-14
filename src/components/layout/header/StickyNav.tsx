@@ -1,6 +1,7 @@
 import { IoMdMenu } from "react-icons/io";
 import styles from './StickyNav.module.scss';
 import { useEffect } from "react";
+import Link from "next/link";
 
 interface MainNavProps {
     setIsMenuOpen: (value: boolean) => void;
@@ -34,36 +35,37 @@ function StickyNav({ setIsMenuOpen, isMenuOpen }: MainNavProps) {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    return(
+    return (
         <>
-        {/* Sticky header Desktop */}
-        <nav className={`${styles['sticky-navbar-desk']} container`}>
-            <div className={`${styles['navbar']}`}>
-                <div className={`${styles.logo}`}>
-                    <span>Acre31</span>
+            {/* Sticky header Desktop */}
+            <nav className={`${styles['sticky-navbar-desk']} container`}>
+                <div className={`${styles['navbar']}`}>
+                    <div className={`${styles.logo}`}>
+                        <span>Acre31</span>
+                    </div>
+                    <div className={`${styles.list}`}>
+                        <ul>
+                            <li>The Venue</li>
+                            <li>Contact Us</li>
+                            <li>Reviews</li>
+                            <li><Link href="/price">Prices</Link></li>
+                        </ul>
+                    </div>
+                    <button className={`${styles['btn-book-tour']} btn`}>
+                        Book a Tour
+                    </button>
                 </div>
-                <div className={`${styles.list}`}>
-                    <ul>
-                        <li>The Venue</li>
-                        <li>Contact Us</li>
-                        <li>Reviews</li>
-                    </ul>
-                </div>
-                <button className={`${styles['btn-book-tour']} btn`}>
-                    Book a Tour
-                </button>
-            </div>
-        </nav>
+            </nav>
 
-        {/* Sticky header Mobile */}
-        <nav className={`${styles['sticky-navbar-mob']} container`}>
-        <div className={`${styles.logo}`}>
-                <img src="https://img.freepik.com/premium-vector/rustic-barn-wedding-venue-logo-design_497517-249.jpg" alt="Logo not found" />
-            </div>
-            <div className={`${styles.menu}`}>
-                <IoMdMenu onClick={() => setIsMenuOpen(!isMenuOpen)}/>
-            </div>
-        </nav>
+            {/* Sticky header Mobile */}
+            <nav className={`${styles['sticky-navbar-mob']} container`}>
+                <div className={`${styles.logo}`}>
+                    <img src="https://img.freepik.com/premium-vector/rustic-barn-wedding-venue-logo-design_497517-249.jpg" alt="Logo not found" />
+                </div>
+                <div className={`${styles.menu}`}>
+                    <IoMdMenu onClick={() => setIsMenuOpen(!isMenuOpen)} />
+                </div>
+            </nav>
         </>
     )
 }

@@ -1,0 +1,21 @@
+@use '../../styles/variables' as *;
+
+.section {
+    padding: 9rem 9rem;
+
+    @media (max-width: $breakpoint-lg) {
+        padding: 7rem 5rem;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        padding: 5rem 3rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 4rem 2rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        padding: 3rem 1.5rem;
+    }
+}
