@@ -45,7 +45,7 @@ function Carousel({ slides }: CarouselProps) {
               src={slide}
               alt={`Slide ${index}`}
               fill
-              style={{ objectFit: "contain" }}
+              // style={{ objectFit: "contain" }}
             />
           </div>
         ))}
