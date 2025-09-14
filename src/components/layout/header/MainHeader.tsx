@@ -1,5 +1,6 @@
 'use client';
 
+import styles from "./MainHeader.module.scss";
 import { useState } from "react";
 import AnnouncementBar from "./AnnouncementBar";
 import MainNav from "./MainNav";
@@ -10,8 +11,8 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header>
-            <AnnouncementBar />
+        <header className={styles['header-container']}>
+            {/* <AnnouncementBar /> */}
             <MainNav setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen}/>
             <StickyNav setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen}/>
             <MobileMenu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen}/>

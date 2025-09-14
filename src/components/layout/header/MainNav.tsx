@@ -10,7 +10,7 @@ function MainNav({ setIsMenuOpen, isMenuOpen }: MainNavProps) {
     return (
         <nav className={`${styles['main']} container`}>
             <div className={`${styles.logo}`}>
-                <img src="https://img.freepik.com/premium-vector/rustic-barn-wedding-venue-logo-design_497517-249.jpg" alt="Logo not found" />
+                <img src="/images/acre31-logo.png" alt="Logo not found" />
             </div>
             <div className={`${styles.list}`}>
                 <ul>
