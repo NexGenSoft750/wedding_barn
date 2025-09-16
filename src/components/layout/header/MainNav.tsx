@@ -19,7 +19,7 @@ function MainNav({ setIsMenuOpen, isMenuOpen }: MainNavProps) {
                     <li><Link href="/price">Prices</Link></li>
                     <li>Gallery</li>
                     <li>Reviews</li>
-                    <li>Contact Us</li>
+                    <li><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
                 <button className={`${styles['btn-book-tour']} btn`}>
                     Book a Tour

@@ -1,0 +1,94 @@
+@use '../../styles/variables' as *;
+
+.navContainer {
+    background-color: rgba(181, 112, 89, 0.85);
+    position: relative;
+    z-index: 10;
+}
+
+// Override mobile menu popup background for contact page
+.contactMobileMenu {
+    background: #1a1a1a !important;
+    z-index: 9999 !important; // Higher z-index to appear on top of nav bar
+
+    // Target the menu close button specifically
+    .menu-close {
+        color: white !important;
+    }
+
+    // Target Bootstrap list group items specifically
+    :global(.list-group-item) {
+        color: white !important;
+        background-color: transparent !important;
+        border: none !important;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
+    }
+}
+
+.contactSection {
+    padding: 4rem;
+    width: 80%;
+    margin: 20px auto;
+
+    &__heading {
+        font-size: 2.3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        display: flex;
+        gap: 4rem;
+
+        .contactSection__info {
+            flex: 1;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: #333;
+
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin: 2rem 0 1rem;
+            }
+
+            a {
+                color: #0073e6;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            ul {
+                margin-top: 1.5rem;
+                padding-left: 2rem;
+                list-style: disc;
+
+                li {
+                    margin-bottom: 0.5rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        @media (max-width: $breakpoint-md) {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        width: 95%;
+    }
+}
