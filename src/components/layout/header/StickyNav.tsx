@@ -46,7 +46,7 @@ function StickyNav({ setIsMenuOpen, isMenuOpen }: MainNavProps) {
                     <div className={`${styles.list}`}>
                         <ul>
                             <li>The Venue</li>
-                            <li>Contact Us</li>
+                            <li><Link href="/contact-us">Contact Us</Link></li>
                             <li>Reviews</li>
                             <li><Link href="/price">Prices</Link></li>
                         </ul>
