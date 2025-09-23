@@ -50,11 +50,28 @@ const PricePackage: React.FC<Props> = ({ currentPricing, currentIncludes, packag
 
             <div className={styles.includedSection}>
                 <h4>{packageType === 'single' ? 'Single Day' : 'Multi-Day'} Package Includes:</h4>
-                <ul>
-                    {currentIncludes.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ul>
+                <div className={styles.includedSectionLists}>
+                    <ul>
+                        {currentIncludes.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                    {
+                        packageType === 'multi' &&
+                        <>
+                            <ul>
+                                {currentIncludes.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                            <ul>
+                                {currentIncludes.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </>
+                    }
+                </div>
             </div>
             <div style={{ textAlign: 'center', margin: '4rem 0 0 0' }}>
                 <CTAButton 

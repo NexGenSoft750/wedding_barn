@@ -36,21 +36,13 @@ const ContactUsPage = () => {
                     <ContactForm />
                     <div className={styles.contactSection__info}>
                         <h3>Better yet, see us in person!</h3>
-                        <p>
-                            Private tours available on request. Group tours take place every 3 months.
-                            Please email <a href="mailto:hello@test123@gmail.com">
-                                hello@test123@gmail.com
-                            </a> or fill out contact form.
-                        </p>
-
-                        <h4>Tuckerberry Hill Events</h4>
-                        <p>35 Becks Road, Drysdale Victoria 3222, Australia</p>
-
+                        <p>Private tours available during weekends on request.Please email <a href="mailto:amber@acre31.com">amber@acre31.com</a> or fill out contact form.</p>
+                        <h4>Acre 31 Wedding and ​Event Center</h4>
+                        <p>1490 FM2104, Smithville, TX 78759</p>
                         <ul>
-                            <li>15 minutes from Portarlington</li>
-                            <li>30 minutes from Geelong</li>
-                            <li>60 minutes from Avalon airport</li>
-                            <li>90 minutes from Melbourne</li>
+                            <li>50​ minutes from Austin</li>
+                            <li>1.5​ hours from Houston</li>
+                            <li>2 hours from San Antonio</li>
                         </ul>
                     </div>
                 </div>

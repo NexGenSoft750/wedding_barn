@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/images/acre31-logo.png',
-    shortcut: '/images/acre31-logo.png',
-    apple: '/images/acre31-logo.png',
+    icon: '/images/favicon.jpeg',
+    shortcut: '/images/favicon.jpeg',
+    apple: '/images/favicon.jpeg',
   },
 };
 
