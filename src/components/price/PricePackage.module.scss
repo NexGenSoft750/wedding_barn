@@ -159,37 +159,43 @@
     z-index: 1;
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 1;
+  .includedSectionLists {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 
-    li {
-      font-size: 1.7rem;
-      padding: 1.2rem 0;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       position: relative;
-      padding-left: 3rem;
-      font-family: $font-family-base;
-      line-height: 1.6;
-
-      &::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: $color-bg-primary;
-        font-weight: bold;
-        font-size: 2rem;
-        background: $color-text-light;
-        border-radius: 50%;
-        width: 2.4rem;
-        height: 2.4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 50%;
-        transform: translateY(-50%);
+      z-index: 1;
+  
+      li {
+        font-size: 1.7rem;
+        padding: 1.2rem 0;
+        position: relative;
+        padding-left: 3rem;
+        font-family: $font-family-base;
+        line-height: 1.6;
+  
+        &::before {
+          content: '✓';
+          position: absolute;
+          left: 0;
+          color: $color-bg-primary;
+          font-weight: bold;
+          font-size: 2rem;
+          background: $color-text-light;
+          border-radius: 50%;
+          width: 2.4rem;
+          height: 2.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
     }
   }
@@ -247,14 +253,18 @@
   .includedSection {
     padding: 1.5rem;
 
-    ul li {
-      padding: 1rem 0;
-      padding-left: 2.5rem;
-
-      &::before {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1.6rem;
+    .includedSectionLists {
+      flex-direction: column;
+      
+      ul li {
+        padding: 1rem 0;
+        padding-left: 2.5rem;
+  
+        &::before {
+          width: 2rem;
+          height: 2rem;
+          font-size: 1.6rem;
+        }
       }
     }
   }
