@@ -61,17 +61,57 @@ export default function Home() {
   };
 
   const singleDayIncludes = [
-    '12 hours of facility access',
-    'All tables and chairs + setup and tear down',
-    'Venue attendant on the wedding day'
+    [
+      "Exclusive Rental for ceremony and reception | 12:00 pm - midnight (11pm end time) Mon-Thur & Sunday 4pm - 10pm",
+      "Up to 4 hours rehearsal time if needed (schedule with us) / overnight storage for next day",
+      "4100 sq ft patio for outdoor ceremony",
+      "All set up and clean up of venue amenities",
+      "Outside unlimited space for seating/dining (we can assist in renting more chairs/tables/tents etc.)",
+      "Outdoor 600 sq ft bar area for cocktail hour and for lawn games",
+    ],
+    [
+      "Bridal Suite with private bathroom",
+      "Groom's Suite",
+      "Separate catering kitchen",
+      "Gorgeous outdoor portraits area with pergola facing our heart-shaped pond",
+      "Pergola with 4 chandeliers",
+      "BYOB (TABC Bartenders are mandatory and security will be provided and scheduled by our staff for an added fee)",
+      "Free parking",
+      "Set up and breakdown of chairs and tables",
+    ],
+    [
+      "Clear chiavari chairs",
+      '10 60" round tables to seat 8-10',
+      "4 farm style tables (2 8ft and 2 4ft)",
+      "No set vendors list*",
+    ],
   ];
 
   const multiDayIncludes = [
-    'Extended facility access across multiple days',
-    'All tables and chairs + setup and tear down',
-    'Venue attendant throughout the event',
-    'Flexible scheduling between days',
-    'Additional storage options'
+    [
+      "Exclusive Rental for ceremony and reception | 12:00 pm - midnight (11pm end time) Mon-Thur & Sunday 4pm - 10pm",
+      "Up to 4 hours rehearsal time if needed (schedule with us) / overnight storage for next day",
+      "4100 sq ft patio for outdoor ceremony",
+      "All set up and clean up of venue amenities",
+      "Outside unlimited space for seating/dining (we can assist in renting more chairs/tables/tents etc.)",
+      "Outdoor 600 sq ft bar area for cocktail hour and for lawn games",
+    ],
+    [
+      "Bridal Suite with private bathroom",
+      "Groom's Suite",
+      "Separate catering kitchen",
+      "Gorgeous outdoor portraits area with pergola facing our heart-shaped pond",
+      "Pergola with 4 chandeliers",
+      "BYOB (TABC Bartenders are mandatory and security will be provided and scheduled by our staff for an added fee)",
+      "Free parking",
+      "Set up and breakdown of chairs and tables",
+    ],
+    [
+      "Clear chiavari chairs",
+      '10 60" round tables to seat 8-10',
+      "4 farm style tables (2 8ft and 2 4ft)",
+      "No set vendors list*",
+    ],
   ];
 
   return (
