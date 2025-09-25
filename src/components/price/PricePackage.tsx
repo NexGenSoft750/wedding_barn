@@ -14,9 +14,9 @@ type Pricing = {
 
 type Props = {
     currentPricing: Pricing;
-    currentIncludes: string[];
+    currentIncludes: string[] | string[][]; // can be either
     packageType: "single" | "multi";
-};
+  };
 
 const PricePackage: React.FC<Props> = ({ currentPricing, currentIncludes, packageType }) => {
     return (
@@ -51,26 +51,21 @@ const PricePackage: React.FC<Props> = ({ currentPricing, currentIncludes, packag
             <div className={styles.includedSection}>
                 <h4>{packageType === 'single' ? 'Single Day' : 'Multi-Day'} Package Includes:</h4>
                 <div className={styles.includedSectionLists}>
-                    <ul>
-                        {currentIncludes.map((item, index) => (
+                {Array.isArray(currentIncludes[0])
+                    ? (currentIncludes as string[][]).map((col, colIndex) => (
+                        <ul key={colIndex}>
+                        {col.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
-                    </ul>
-                    {
-                        packageType === 'multi' &&
-                        <>
-                            <ul>
-                                {currentIncludes.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
-                            <ul>
-                                {currentIncludes.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                ))}
-                            </ul>
-                        </>
-                    }
+                        </ul>
+                    ))
+                    : (
+                        <ul>
+                        {(currentIncludes as string[]).map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                        </ul>
+                    )}
                 </div>
             </div>
             <div style={{ textAlign: 'center', margin: '4rem 0 0 0' }}>
