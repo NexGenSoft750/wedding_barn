@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.scss';
-import Layout from '@/components/layout/Layout';
+import ConditionalLayout from '@/components/layout/ConditionalLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -81,9 +81,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body suppressHydrationWarning>
-        <Layout>
+        <ConditionalLayout>
           {children}
-        </Layout>
+        </ConditionalLayout>
       </body>
     </html>
   );
