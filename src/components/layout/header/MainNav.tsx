@@ -20,10 +20,13 @@ function MainNav({ setIsMenuOpen, isMenuOpen }: MainNavProps) {
                     <li>Gallery</li>
                     <li>Reviews</li>
                     <li><Link href="/contact-us">Contact Us</Link></li>
+                    <li><Link href="/admin">Admin</Link></li>
                 </ul>
-                <button className={`${styles['btn-book-tour']} btn`}>
-                    Book a Tour
-                </button>
+                <Link href="/book-tour">
+                    <button className={`${styles['btn-book-tour']} btn`}>
+                        Book a Tour
+                    </button>
+                </Link>
             </div>
             <div className={`${styles.menu}`}>
                 <IoMdMenu onClick={() => setIsMenuOpen(!isMenuOpen)} />
